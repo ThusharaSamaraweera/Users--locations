@@ -2,7 +2,7 @@ package com.example.user_list
 
 import java.util.*
 
-data class UserModel (
+data class UserLocationModel (
     var id: Int = getId(),
     var username: String = "",
     var city: String = "",

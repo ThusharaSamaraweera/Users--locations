@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         btn_add = findViewById(R.id.btn_add)
         btn_view = findViewById(R.id.btn_view)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         if(username.isEmpty() || city.isEmpty() || longitude.isEmpty() || latitude.isEmpty()){
             Toast.makeText(this,"Form is not filled", Toast.LENGTH_SHORT).show()
         }else {
-            val userLocation = UserModel(username = username, longitude = longitude, latitude = latitude)
+            val userLocation = UserLocationModel(username = username, longitude = longitude, latitude = latitude)
             val status = sqLiteHelper.insertLocation(userLocation)
 
             if(status > -1){

@@ -29,7 +29,7 @@ class SQLiteHelper (context: Context): SQLiteOpenHelper(context, DB_NAME, null, 
         onCreate(db)
     }
 
-    fun insertLocation(user :UserModel): Long {
+    fun insertLocation(user :UserLocationModel): Long {
 
         val db = this.writableDatabase
         val contentValues = ContentValues()
