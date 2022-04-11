@@ -25,6 +25,10 @@ class UserLocationAdapter: RecyclerView.Adapter<UserLocationAdapter.UserLocation
         LayoutInflater.from(parent.context).inflate(R.layout.user,parent,false)
     }
 
+    fun setOnClickDeleteUserLoc(callback: (UserLocationModel) -> Unit){
+        this.onClickDeleteUser = callback
+    }
+
     class UserLocationViewHolder(var view: View): RecyclerView.ViewHolder(view){
         private var username = view.findViewById<TextView>(R.id.tv_username)
         private var city = view.findViewById<TextView>(R.id.tv_city)
